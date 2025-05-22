@@ -1,0 +1,23 @@
+service: "src.service:svc"
+labels:
+  owner: "thoma"
+  project: "admissions"
+  models:
+  - admissions_lr
+  - admissions_rf
+include:
+  - src/
+  - data/
+  - models/
+  - tests/
+  - "requirements.txt"
+python:
+  packages:
+    - scikit-learn
+    - pandas
+    - pydantic
+    - fastapi
+    - PyJWT  
+    - bentoml<1.4
+    - requests
+    - numpy  

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    command: bentoml serve /bento --port 3000
